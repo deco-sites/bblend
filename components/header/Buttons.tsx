@@ -13,8 +13,9 @@ function SearchButton() {
       onClick={() => {
         displaySearchbar.value = !displaySearchbar.peek();
       }}
+      class="text-red-500"
     >
-      <Icon id="MagnifyingGlass" width={20} height={20} strokeWidth={0.1} />
+      <Icon id="MagnifyingGlass" width={20} height={20} strokeWidth={1} />
     </Button>
   );
 }

@@ -30,7 +30,7 @@ function CloseButton() {
       variant="icon"
       onClick={() => (displaySearchbar.value = false)}
     >
-      <Icon id="XMark" width={20} height={20} strokeWidth={2} />
+      <Icon id="XMark" width={25} height={25} strokeWidth={2} />
     </Button>
   );
 }
@@ -76,7 +76,7 @@ export type Props = EditableProps & {
 };
 
 function Searchbar({
-  placeholder = "What are you looking for?",
+  placeholder = "Digite aqui os produtos que você procura..",
   action = "/s",
   name = "q",
   query,
@@ -108,30 +108,17 @@ function Searchbar({
 
   return (
     <div class="flex flex-col p-4 md:(py-6 px-20)">
-      <div class="flex gap-4">
+      <div class="flex gap-2 pb-5">
+        {variant === "desktop" && <CloseButton />}
         <form
           id="searchbar"
           action={action}
-          class="flex-grow flex gap-3 px-3 py-2 border border-default"
+          class="flex-grow flex items-center gap-3 px-2 py-2 border border-default rounded-full h-[40px] "
         >
-          <Button
-            variant="icon"
-            aria-label="Search"
-            htmlFor="searchbar"
-            tabIndex={-1}
-          >
-            <Icon
-              class="text-subdued"
-              id="MagnifyingGlass"
-              width={20}
-              height={20}
-              strokeWidth={0.01}
-            />
-          </Button>
           <input
             ref={searchInputRef}
             id="search-input"
-            class="flex-grow outline-none placeholder-shown:sibling:hidden"
+            class="flex-grow outline-none placeholder-shown:sibling:hidden pl-2"
             name={name}
             defaultValue={query}
             onInput={(e) => {
@@ -159,8 +146,21 @@ function Searchbar({
           >
             <Text variant="caption" tone="default">limpar</Text>
           </button>
+          <Button
+            variant="icon"
+            aria-label="Search"
+            htmlFor="searchbar"
+            tabIndex={-1}
+          >
+            <Icon
+              class="text-red-500"
+              id="MagnifyingGlass"
+              width={20}
+              height={20}
+              strokeWidth={0.01}
+            />
+          </Button>
         </form>
-        {variant === "desktop" && <CloseButton />}
       </div>
       <div class="flex flex-col gap-6 divide-y divide-default mt-6 empty:mt-0 md:(flex-row divide-y-0)">
         {searches && searches.length > 0 && !hasSuggestions && (

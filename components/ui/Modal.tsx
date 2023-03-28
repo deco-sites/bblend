@@ -57,29 +57,36 @@ const Modal = ({
   }, [open]);
 
   return (
-    <dialog
-      {...props}
-      ref={ref}
-      class={`bg-transparent p-0 m-0 max-w-full sm:max-w-lg w-full max-h-full h-full backdrop ${variant} ${
-        props.class ?? ""
-      }`}
-      onClick={(e) =>
-        (e.target as HTMLDialogElement).tagName === "DIALOG" && onClose?.()}
-    >
-      <section class="pt-6 h-full bg-default flex flex-col">
-        <header class="flex px-4 justify-between items-center pb-6 border-b-1 border-default">
-          <h1>
-            <Text variant="heading-2">{title}</Text>
-          </h1>
-          <Button variant="icon" onClick={onClose}>
-            <Icon id="XMark" width={20} height={20} strokeWidth={2} />
-          </Button>
-        </header>
-        <div class="overflow-y-auto h-full flex flex-col">
-          {loading === "lazy" ? lazy.value && children : children}
-        </div>
-      </section>
-    </dialog>
+    <>
+      <dialog
+        {...props}
+        ref={ref}
+        class={`bg-transparent p-0 m-0 max-w-full sm:max-w-lg w-4/6 max-h-full h-full backdrop ${variant} ${
+          props.class ?? ""
+        }`}
+        onClick={(e) =>
+          (e.target as HTMLDialogElement).tagName === "DIALOG" && onClose?.()}
+      >
+        <section class="pt-6 h-full bg-default flex flex-col">
+          <header class="flex px-4 justify-between items-center pb-6 ">
+            <h1>
+              <p>Olá,</p>
+              <p class="font-bold">
+                Visitante{" "}
+                <a class="font-light underline text-sm pl-2">Entrar</a>
+              </p>
+            </h1>
+
+            <Button variant="icon" onClick={onClose}>
+              <Icon id="XMark" width={20} height={20} strokeWidth={2} />
+            </Button>
+          </header>
+          <div class="overflow-y-auto  h-full flex flex-col">
+            {loading === "lazy" ? lazy.value && children : children}
+          </div>
+        </section>
+      </dialog>
+    </>
   );
 };
 
