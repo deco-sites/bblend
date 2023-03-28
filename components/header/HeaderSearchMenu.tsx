@@ -14,13 +14,13 @@ interface Props {
 export default function HeaderSearchMenu({ searchbar }: Props) {
   const { displaySearchbar } = useUI();
   const open = displaySearchbar.value &&
-    window?.matchMedia?.("(min-width: 768px)")?.matches;
+    window?.matchMedia?.("(min-width: 268px)")?.matches;
 
   return (
     <div
       class={`${
         open ? "block border-t-1 border-default shadow" : "hidden"
-      } absolute left-0 w-screen z-50 bg-white top-[${headerHeight}]`}
+      } flex items-center h-4/6 mt-2 absolute left-0 w-screen z-50 bg-white top-[${headerHeight}]`}
     >
       {open && (
         <Suspense fallback={<Loading />}>

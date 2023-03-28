@@ -163,7 +163,7 @@ function MenuItem({ item, level = 0 }: { item: INavItem; level?: number }) {
 function Menu({ items }: Props) {
   return (
     <>
-      <ul class="h-4/6 px-4 flex-grow flex flex-col divide-y divide-default overflow-scroll">
+      <ul class="h-4/6 px-4 flex-grow flex flex-col divide-y divide-default overflow-y-scroll">
         {items.map((item) => <MenuItem item={item} />)}
       </ul>
 

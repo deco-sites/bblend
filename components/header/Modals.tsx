@@ -39,7 +39,7 @@ function Modals({ menu, searchbar }: Props) {
         mode="sidebar-right"
         loading="lazy"
         open={displaySearchbar.value &&
-          window?.matchMedia("(max-width: 767px)")?.matches}
+          window?.matchMedia("(max-width: 167px)")?.matches}
         onClose={() => {
           displaySearchbar.value = false;
         }}

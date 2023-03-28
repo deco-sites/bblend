@@ -81,7 +81,7 @@ const Modal = ({
               <Icon id="XMark" width={20} height={20} strokeWidth={2} />
             </Button>
           </header>
-          <div class="overflow-y-auto h-full flex flex-col">
+          <div class="overflow-y-auto  h-full flex flex-col">
             {loading === "lazy" ? lazy.value && children : children}
           </div>
         </section>

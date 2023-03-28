@@ -27,10 +27,15 @@ function Navbar({ items, searchbar }: {
         >
           <Icon id="Logo" width={126} height={16} />
         </a>
-
-        <div class="flex gap-1">
+        <div class="rounded border-l-1 border-r-1 border-red-500">
+          <a href="/maquinas" class="mx-2">
+            Comprar Máquina
+          </a>
+        </div>
+        <div class="flex gap-1 text-red-600 text-lg">
           <HeaderButton variant="search" />
-          <HeaderButton variant="cart" />
+          <HeaderSearchMenu searchbar={searchbar} />
+          {/* <HeaderButton variant="cart" /> */}
         </div>
       </div>
 
