@@ -8,13 +8,68 @@ export interface Props {
   items: INavItem[];
 }
 
+function renderFirst(param: string, index: number) {
+  switch (param) {
+    case "Feminino":
+      if (index === 0) {
+        return "Bebidas";
+      } else if (index === 1) {
+        return "Caixa Mix";
+      } else if (index === 2) {
+        return "Máquinas";
+      } else if (index === 3) {
+        return "Acessórios";
+      } else if (index === 4) {
+        return "Combos";
+      } else {
+        break;
+      }
+    case "Masculino":
+      if (index === 0) {
+        return "Minhas Compras Programadas";
+      } else if (index === 1) {
+        return "Meu Perfil";
+      } else if (index === 2) {
+        return "Meus cartões";
+      } else if (index === 3) {
+        return "Endereços";
+      } else if (index === 4) {
+        return "Meus créditos";
+      } else if (index === 5) {
+        return "Meus pedidos";
+      } else {
+        break;
+      }
+    case "Sale":
+      if (index === 0) {
+        return "Indique e ganhe";
+      } else if (index === 1) {
+        return "Compra programada";
+      } else {
+        break;
+      }
+    case "Conheça mais":
+      if (index === 0) {
+        return "Loja";
+      } else if (index === 1) {
+        return "Blog";
+      } else if (index === 2) {
+        return "Sustentabilidade";
+      } else if (index === 3) {
+        return "Instalação";
+      } else {
+        break;
+      }
+  }
+}
+
 function MenuItem({ item, level = 0 }: { item: INavItem; level?: number }) {
   const open = useSignal(false);
   const hasChildren = Array.isArray(item.children) && item.children.length > 0;
 
   const title = (
     <Text
-      class="flex-grow min-h-[40px] flex items-center justify-start"
+      class="flex-grow min-h-[40px] flex items-center justify-start text-pink-600 font-extrabold"
       variant={level === 0 ? "menu" : "caption"}
     >
       {item.label}
@@ -39,14 +94,14 @@ function MenuItem({ item, level = 0 }: { item: INavItem; level?: number }) {
           <Button variant="icon">
             <Icon
               class={open.value === true ? "hidden" : "block"}
-              id="Plus"
+              id="ChevronDown"
               height={20}
               width={20}
               strokeWidth={1.5}
             />
             <Icon
               class={open.value === true ? "block" : "hidden"}
-              id="Minus"
+              id="ChevronUp"
               height={20}
               width={20}
               strokeWidth={1.5}
@@ -56,20 +111,49 @@ function MenuItem({ item, level = 0 }: { item: INavItem; level?: number }) {
       </div>
 
       {hasChildren && (
-        <ul class={`flex-col ${open.value === true ? "flex" : "hidden"}`}>
+        <ul
+          class={`flex-col  ${open.value === true ? "flex" : "hidden"}`}
+        >
           <li>
             <a href={item.href} class="w-full py-2 pl-2 inline-block">
               <Text class="underline" variant="caption">
-                Ver todos
+                {renderFirst(item.label, 0)}
+              </Text>
+            </a>
+            <a href={item.href} class="w-full py-2 pl-2 inline-block">
+              <Text class="underline" variant="caption">
+                {renderFirst(item.label, 1)}
+              </Text>
+            </a>
+            <a href={item.href} class="w-full py-2 pl-2 inline-block">
+              <Text class="underline" variant="caption">
+                {renderFirst(item.label, 2)}
+              </Text>
+            </a>
+            <a href={item.href} class="w-full py-2 pl-2 inline-block">
+              <Text class="underline " variant="caption">
+                {renderFirst(item.label, 3)}
+              </Text>
+            </a>
+            <a href={item.href} class="w-full py-2 pl-2 inline-block">
+              <Text class="underline" variant="caption">
+                {renderFirst(item.label, 4)}
+              </Text>
+            </a>
+            <a href={item.href} class="w-full py-2 pl-2 inline-block">
+              <Text class="underline" variant="caption">
+                {renderFirst(item.label, 5)}
               </Text>
             </a>
           </li>
-          {item.children!.map((node) => (
+          {
+            /* {item.children!.map((node) => (
             <MenuItem
               item={node}
               level={level + 1}
             />
-          ))}
+          ))} */
+          }
         </ul>
       )}
     </li>
@@ -79,48 +163,33 @@ function MenuItem({ item, level = 0 }: { item: INavItem; level?: number }) {
 function Menu({ items }: Props) {
   return (
     <>
-      <ul class="px-4 flex-grow flex flex-col divide-y divide-default">
+      <ul class="h-4/6 px-4 flex-grow flex flex-col divide-y divide-default overflow-scroll">
         {items.map((item) => <MenuItem item={item} />)}
       </ul>
 
-      <ul class="flex flex-col py-2 bg-hover">
-        <li>
-          <a
-            class="flex items-center gap-4 px-4 py-2"
-            href="https://www.deco.cx"
-          >
-            <Icon id="Heart" width={20} height={20} strokeWidth={2} />
-            <Text variant="caption">Lista de desejos</Text>
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center gap-4 px-4 py-2"
-            href="https://www.deco.cx"
-          >
-            <Icon id="MapPin" width={20} height={20} strokeWidth={2} />
-            <Text variant="caption">Nossas lojas</Text>
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center gap-4 px-4 py-2"
-            href="https://www.deco.cx"
-          >
-            <Icon id="Phone" width={20} height={20} strokeWidth={2} />
-            <Text variant="caption">Fale conosco</Text>
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center gap-4 px-4 py-2"
-            href="https://www.deco.cx"
-          >
-            <Icon id="User" width={20} height={20} strokeWidth={2} />
-            <Text variant="caption">Minha conta</Text>
-          </a>
-        </li>
-      </ul>
+      <div class="h-2/6 flex flex-col items-start py-2">
+        <a
+          class="flex items-center gap-4 px-4 py-2"
+          href="https://www.deco.cx"
+        >
+          {/* <Icon id="Heart" width={20} height={20} strokeWidth={2} /> */}
+          <Text variant="caption" class="underline font-light text-lg">
+            Política de privacidade
+          </Text>
+        </a>
+        <div class="w-5/6 self-center">
+          <Button class="self-center w-full rounded-full bg-purple-600 mb-2">
+            Monte sua Caixa Mix
+          </Button>
+          <Button class="self-center w-full rounded-full bg-pink-500 mb-2">
+            B.blend para empresas
+          </Button>
+        </div>
+        <div class="px-4">
+          <p class="font-bold text-pink-600">Compre pelo APP</p>
+          {/* Add App Store image in here */}
+        </div>
+      </div>
     </>
   );
 }
