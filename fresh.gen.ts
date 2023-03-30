@@ -17,26 +17,29 @@ import * as $$3 from "./islands/HeaderSearchMenu.tsx";
 import * as $$4 from "./islands/SearchControls.tsx";
 import * as $$5 from "./islands/SliderJS.tsx";
 import * as $$$0 from "./sections/BannerGrid.tsx";
-import * as $$$1 from "./sections/Carousel.tsx";
-import * as $$$2 from "./sections/CookieConsent.tsx";
-import * as $$$3 from "./sections/DesignSystem.story.tsx";
-import * as $$$4 from "./sections/Features.tsx";
-import * as $$$5 from "./sections/Footer.tsx";
-import * as $$$6 from "./sections/Header.tsx";
-import * as $$$7 from "./sections/Highlights.tsx";
-import * as $$$8 from "./sections/LinkTree.tsx";
-import * as $$$9 from "./sections/ProductDetails.tsx";
-import * as $$$10 from "./sections/ProductGallery.tsx";
-import * as $$$11 from "./sections/ProductShelf.tsx";
-import * as $$$12 from "./sections/SearchControls.tsx";
-import * as $$$13 from "./sections/WhatsApp.tsx";
-import * as $$$14 from "deco-sites/std/sections/SEO.tsx";
-import * as $$$15 from "deco-sites/std/sections/SEOPDP.tsx";
-import * as $$$16 from "deco-sites/std/sections/SEOPLP.tsx";
-import * as $$$17 from "deco-sites/std/sections/configOCC.global.tsx";
-import * as $$$18 from "deco-sites/std/sections/configShopify.global.tsx";
-import * as $$$19 from "deco-sites/std/sections/configVTEX.global.tsx";
-import * as $$$20 from "deco-sites/std/sections/configYourViews.tsx";
+import * as $$$1 from "./sections/CapsuleShelf.tsx";
+import * as $$$2 from "./sections/Carousel.tsx";
+import * as $$$3 from "./sections/CookieConsent.tsx";
+import * as $$$4 from "./sections/DesignSystem.story.tsx";
+import * as $$$5 from "./sections/DuasOpcoes.tsx";
+import * as $$$6 from "./sections/Features.tsx";
+import * as $$$7 from "./sections/Footer.tsx";
+import * as $$$8 from "./sections/Header.tsx";
+import * as $$$9 from "./sections/Highlights.tsx";
+import * as $$$10 from "./sections/LinkTree.tsx";
+import * as $$$11 from "./sections/MiddlePageText.tsx";
+import * as $$$12 from "./sections/ProductDetails.tsx";
+import * as $$$13 from "./sections/ProductGallery.tsx";
+import * as $$$14 from "./sections/ProductShelf.tsx";
+import * as $$$15 from "./sections/SearchControls.tsx";
+import * as $$$16 from "./sections/WhatsApp.tsx";
+import * as $$$17 from "deco-sites/std/sections/SEO.tsx";
+import * as $$$18 from "deco-sites/std/sections/SEOPDP.tsx";
+import * as $$$19 from "deco-sites/std/sections/SEOPLP.tsx";
+import * as $$$20 from "deco-sites/std/sections/configOCC.global.tsx";
+import * as $$$21 from "deco-sites/std/sections/configShopify.global.tsx";
+import * as $$$22 from "deco-sites/std/sections/configVTEX.global.tsx";
+import * as $$$23 from "deco-sites/std/sections/configYourViews.tsx";
 import * as $$$$0 from "$live/functions/EffectSelectPage.ts";
 import * as $$$$1 from "$live/functions/MatchDate.ts";
 import * as $$$$2 from "$live/functions/MatchEnvironment.ts";
@@ -75,26 +78,29 @@ const manifest: DecoManifest = {
   },
   sections: {
     "./sections/BannerGrid.tsx": $$$0,
-    "./sections/Carousel.tsx": $$$1,
-    "./sections/CookieConsent.tsx": $$$2,
-    "./sections/DesignSystem.story.tsx": $$$3,
-    "./sections/Features.tsx": $$$4,
-    "./sections/Footer.tsx": $$$5,
-    "./sections/Header.tsx": $$$6,
-    "./sections/Highlights.tsx": $$$7,
-    "./sections/LinkTree.tsx": $$$8,
-    "./sections/ProductDetails.tsx": $$$9,
-    "./sections/ProductGallery.tsx": $$$10,
-    "./sections/ProductShelf.tsx": $$$11,
-    "./sections/SearchControls.tsx": $$$12,
-    "./sections/WhatsApp.tsx": $$$13,
-    "deco-sites/std/sections/SEO.tsx": $$$14,
-    "deco-sites/std/sections/SEOPDP.tsx": $$$15,
-    "deco-sites/std/sections/SEOPLP.tsx": $$$16,
-    "deco-sites/std/sections/configOCC.global.tsx": $$$17,
-    "deco-sites/std/sections/configShopify.global.tsx": $$$18,
-    "deco-sites/std/sections/configVTEX.global.tsx": $$$19,
-    "deco-sites/std/sections/configYourViews.tsx": $$$20,
+    "./sections/CapsuleShelf.tsx": $$$1,
+    "./sections/Carousel.tsx": $$$2,
+    "./sections/CookieConsent.tsx": $$$3,
+    "./sections/DesignSystem.story.tsx": $$$4,
+    "./sections/DuasOpcoes.tsx": $$$5,
+    "./sections/Features.tsx": $$$6,
+    "./sections/Footer.tsx": $$$7,
+    "./sections/Header.tsx": $$$8,
+    "./sections/Highlights.tsx": $$$9,
+    "./sections/LinkTree.tsx": $$$10,
+    "./sections/MiddlePageText.tsx": $$$11,
+    "./sections/ProductDetails.tsx": $$$12,
+    "./sections/ProductGallery.tsx": $$$13,
+    "./sections/ProductShelf.tsx": $$$14,
+    "./sections/SearchControls.tsx": $$$15,
+    "./sections/WhatsApp.tsx": $$$16,
+    "deco-sites/std/sections/SEO.tsx": $$$17,
+    "deco-sites/std/sections/SEOPDP.tsx": $$$18,
+    "deco-sites/std/sections/SEOPLP.tsx": $$$19,
+    "deco-sites/std/sections/configOCC.global.tsx": $$$20,
+    "deco-sites/std/sections/configShopify.global.tsx": $$$21,
+    "deco-sites/std/sections/configVTEX.global.tsx": $$$22,
+    "deco-sites/std/sections/configYourViews.tsx": $$$23,
   },
   functions: {
     "$live/functions/EffectSelectPage.ts": $$$$0,
@@ -218,6 +224,24 @@ const manifest: DecoManifest = {
       },
       "outputSchema": null,
     },
+    "./sections/CapsuleShelf.tsx": {
+      "inputSchema": {
+        "title": " Capsule Shelf",
+        "type": "object",
+        "properties": {
+          "products": {
+            "$id": "bae848f3957be1cb6ed2c2ac3847787272389ee9",
+            "format": "live-function",
+            "type": "string",
+            "title": "Products",
+          },
+        },
+        "required": [
+          "products",
+        ],
+      },
+      "outputSchema": null,
+    },
     "./sections/Carousel.tsx": {
       "inputSchema": {
         "title": " Carousel",
@@ -311,6 +335,45 @@ const manifest: DecoManifest = {
     },
     "./sections/DesignSystem.story.tsx": {
       "inputSchema": null,
+      "outputSchema": null,
+    },
+    "./sections/DuasOpcoes.tsx": {
+      "inputSchema": {
+        "title": " Duas Opcoes",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Title",
+          },
+          "secondTitle": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Second Title",
+          },
+          "description": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Description",
+          },
+          "products": {
+            "$id": "bae848f3957be1cb6ed2c2ac3847787272389ee9",
+            "format": "live-function",
+            "type": "string",
+            "title": "Products",
+          },
+        },
+        "required": [
+          "products",
+        ],
+      },
       "outputSchema": null,
     },
     "./sections/Features.tsx": {
@@ -876,7 +939,10 @@ const manifest: DecoManifest = {
                   "title": "Href",
                 },
                 "label": {
-                  "type": "string",
+                  "type": [
+                    "string",
+                    "null",
+                  ],
                   "title": "Label",
                 },
               },
@@ -884,7 +950,6 @@ const manifest: DecoManifest = {
                 "src",
                 "alt",
                 "href",
-                "label",
               ],
             },
             "title": "Highlights",
@@ -982,6 +1047,37 @@ const manifest: DecoManifest = {
               ],
             },
             "title": "Social",
+          },
+        },
+        "required": [],
+      },
+      "outputSchema": null,
+    },
+    "./sections/MiddlePageText.tsx": {
+      "inputSchema": {
+        "title": " Middle Page Text",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Title",
+          },
+          "secondTitle": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Second Title",
+          },
+          "description": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Description",
           },
         },
         "required": [],
