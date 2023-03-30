@@ -15,7 +15,7 @@ function CapsuleShelf({ products }: Props) {
   return (
     <div class="flex flex-col items-center justify-center w-full">
       {products?.map((product, index) => (
-        <div class="w-full">
+        <div class="w-full mb-6">
           <CapsuleCard product={product} />
         </div>
       ))}
