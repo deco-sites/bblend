@@ -33,7 +33,7 @@ function OptionProductCard({ product, preload }: Props) {
     <div
       data-deco="view-product"
       id={`product-card-${productID}`}
-      class="w-full group bg-default rounded-lg"
+      class="group bg-default rounded-lg"
     >
       <a href={url} aria-label="product link">
         <div class="relative w-full">
@@ -76,25 +76,27 @@ function OptionProductCard({ product, preload }: Props) {
             en.joy
           </Text>
           {/* Quer ver como ela fica na sua casa? */}
-          <div class="flex flex-row w-full mx-2">
+          <div class="flex flex-row mx-2 items-center">
             <Image
               src={"https://bblend.vteximg.com.br/arquivos/qrcode-mobile-box-purple.png?v=637950583506970000"}
               alt={front.alternateName}
               width={56}
               height={56}
-              class="ml-2 mr-2"
+              class="ml-2 mr-2 max-h-[56px]"
               preload={preload}
               loading={preload ? "eager" : "lazy"}
             />
 
-            <p class="text-left">QUER VER COMO ELA FICA NA SUA CASA?</p>
+            <p class="text-left ">
+              QUER VER COMO ELA FICA NA SUA CASA?
+            </p>
           </div>
           <Text variant="caption" class="text-left mx-4 my-1">
             Use nosso programa de Realidade Aumentada e veja como a nova B.blend
             en.joy fica linda na sua casa.
           </Text>
-          <Button class="w-full mx-4 rounded-full my-2">
-            Clique e surpreenda-se
+          <Button class="mx-4 p-0 rounded-full my-2">
+            <span class="p-0 m-0">Clique e surpreenda-se</span>
           </Button>
           <div class="flex flex-col justify-center gap-2">
             <Text
@@ -107,7 +109,7 @@ function OptionProductCard({ product, preload }: Props) {
             <Text variant="caption" tone="price">
               {formatPrice(price, offers!.priceCurrency!)}
             </Text>
-            <Button class="rounded-lg mb-6">É Essa que eu quero</Button>
+            <Button class="rounded-lg mb-6 h-14">É Essa que eu quero</Button>
           </div>
         </div>
       </a>
