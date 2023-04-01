@@ -1,7 +1,7 @@
-import MiddlePageText, { Props } from "$store/components/ui/MiddlePageText.tsx";
+import JaTemUmaBBlend, { Props } from "$store/components/ui/MiddlePageText.tsx";
 
 function MiddlePageTextSection(props: Props) {
-  return <MiddlePageText {...props} />;
+  return <JaTemUmaBBlend {...props} />;
 }
 
 export default MiddlePageTextSection;

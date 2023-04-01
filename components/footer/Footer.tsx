@@ -60,20 +60,20 @@ export interface Props {
 
 function Footer({ sections = [] }: Props) {
   return (
-    <footer class="w-full bg-footer flex flex-col divide-y-1 divide-default">
+    <footer class="w-full  bg-footer flex flex-col divide-y-1 divide-default">
       <div>
         <Container class="w-full flex flex-col divide-y-1 divide-default">
-          <FooterContainer>
-            <Newsletter />
-          </FooterContainer>
-
           <FooterContainer>
             {/* Desktop view */}
             <ul class="hidden sm:flex flex-row gap-20">
               {sections.map((section) => (
                 <li>
                   <div>
-                    <Text variant="heading-3" tone="default-inverse">
+                    <Text
+                      variant="heading-3"
+                      tone="section-title"
+                      class=""
+                    >
                       {section.label}
                     </Text>
 
@@ -94,7 +94,16 @@ function Footer({ sections = [] }: Props) {
             </ul>
 
             {/* Mobile view */}
-            <ul class="flex flex-col sm:hidden sm:flex-row gap-4">
+            <div class="flex flex-row justify-center w-full mb-4">
+              <Text
+                variant="heading-2"
+                tone="default-inverse"
+                class="text-center"
+              >
+                B.blend
+              </Text>
+            </div>
+            <ul class="flex flex-col items-center sm:hidden sm:flex-row gap-4">
               {sections.map((section) => (
                 <li>
                   <Text variant="body" tone="default-inverse">
@@ -122,7 +131,9 @@ function Footer({ sections = [] }: Props) {
           </FooterContainer>
         </Container>
       </div>
-
+      <FooterContainer>
+        <Newsletter />
+      </FooterContainer>
       <div>
         <Container class="w-full">
           <FooterContainer class="flex justify-between w-full">
