@@ -4,6 +4,7 @@ function Newsletter() {
   return (
     <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-20">
       <div class="flex flex-col gap-2 items-center max-w-[400px]">
+        Cadastre-se
       </div>
       <form class="flex flex-col gap-4 font-body text-body w-4/5">
         <input
