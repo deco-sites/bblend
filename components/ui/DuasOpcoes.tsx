@@ -18,11 +18,11 @@ function DuasOpcoes({ title, secondTitle, description, products }: Props) {
   }
 
   return (
-    <div class="flex flex-col items-center justify-center w-full bg-gray-100">
+    <div class="flex flex-col items-center justify-center w-full bg-gray-100 mt-7">
       {/* Main Title Div */}
-      <div>
-        <Text variant="heading-3">Duas opções.</Text>
-        <Text variant="heading-3" class="font-extrabold">
+      <div class="flex flex-col items-center my-6">
+        <Text variant="heading-2">Duas opções.</Text>
+        <Text variant="heading-2" class="font-extrabold">
           Uma combina com você.
         </Text>
       </div>
@@ -35,12 +35,22 @@ function DuasOpcoes({ title, secondTitle, description, products }: Props) {
         ))}
       </div>
       {/* Footer Div */}
-      <Button class="mt-4 mb-2 h-14">Comprar para minha empresa</Button>
-      <Button class="h-14 mb-3">Aprenda a instalar</Button>
-      <a class="underline mb-8">Especificação Técnica</a>
+      <Button
+        class="w-8/12 mt-4 mb-2 h-14 bg-purple-600 text-white font-extrabold"
+        variant="primary"
+      >
+        Comprar para minha empresa
+      </Button>
+      <Button
+        class="w-7/12 mt-4 mb-2 h-14 bg-purple-600 text-white font-extrabold"
+        variant="primary"
+      >
+        Aprenda a instalar
+      </Button>
+      <a class="underline mb-12 font-extrabold">Especificação Técnica</a>
       {/* Compare os Modelos */}
       <div class="w-full flex flex-col items-center justify-center bg-default">
-        <div class="flex justify-center">
+        <div class="flex justify-center my-14">
           <Text variant="heading-3" class="font-extrabold">
             Compare os modelos
           </Text>

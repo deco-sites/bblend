@@ -8,7 +8,7 @@ export interface Props {
 
 function MiddlePageText({ title, secondTitle, description }: Props) {
   return (
-    <div class="flex flex-col items-center justify-center w-full">
+    <div class="flex flex-col items-center justify-center w-full mb-3">
       {/* Main Title Div */}
       <div class="mb-6">
         <Text variant="heading-2" class="text-center">

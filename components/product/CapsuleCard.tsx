@@ -14,9 +14,10 @@ function CapsuleCard({ product }: Props) {
     image: images,
     offers,
   } = product;
+
   const [front, back] = images ?? [];
   return (
-    <div class="flex flex-col rounded bg-gray-200 mx-3 rounded-xl">
+    <div class="flex flex-col rounded bg-gray-100 mx-3 rounded-xl">
       {/* Header */}
       <div class="h-4/6 min-w-full w-full flex flex-row">
         <a class="w-2/6">
@@ -30,8 +31,7 @@ function CapsuleCard({ product }: Props) {
         </a>
         <div class="flex flex-col mt-3">
           <h3 class="mb-4 font-extrabold">Pepsi</h3>
-          <h2>De: 2,29</h2>
-          <h2 class="text-pink-500">RS$1,79</h2>
+          <h2 class="text-pink-500 font-extrabold">RS$2,29</h2>
         </div>
         <div class="mx-auto mt-auto mb-2">
           <Button class="bg-pink-600 rounded-full w-36">Eu quero</Button>

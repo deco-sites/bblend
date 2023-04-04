@@ -37,18 +37,35 @@ function OptionProductDescriptionCard({ product, preload }: Props) {
     >
       <div class="flex flex-col gap-1 py-2 items-center ">
         <Text
-          class="overflow-hidden overflow-ellipsis whitespace-nowrap"
+          class="text-pink-500 font-extrabold overflow-hidden overflow-ellipsis whitespace-nowrap"
           variant="heading-3"
         >
-          {brand} en.joy
+          <span class=" mr-2">{brand}</span>
+          {product.productID === "471" ? "en.joy" : "un.plug"}
         </Text>
       </div>
       <div class="flex flex-col items-center justify-center border-b-1">
         <p>Cores</p>
-        <div class="flex flex-row">
-          <Button variant="tertiary" class="bg-red-500"></Button>
-          <Button variant="tertiary" class="bg-red-500"></Button>
-          <Button variant="tertiary" class="bg-red-500"></Button>
+
+        <div
+          class={`flex-row gap-1 mb-2 ${
+            product.productID === "471" ? "flex" : "hidden"
+          }`}
+        >
+          <Button variant="tertiary" class="h-6 w-6 bg-black rounded-lg">
+          </Button>
+          <Button variant="tertiary" class="h-6 w-6 bg-red-500 rounded-lg">
+          </Button>
+          <Button variant="tertiary" class="h-6 w-6 bg-gray-500 rounded-lg">
+          </Button>
+        </div>
+        <div
+          class={`flex-row gap-1 mb-2 ${
+            product.productID === "471" ? "hidden" : "flex"
+          }`}
+        >
+          <Button variant="tertiary" class="h-6 w-6 bg-black rounded-lg">
+          </Button>
         </div>
       </div>
       <div class="flex flex-col items-center justify-center border-b-1">
