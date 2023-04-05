@@ -7,13 +7,13 @@ export interface Props {
   products: LoaderReturnType<Product[] | null>;
 }
 
-function CapsuleShelf({ products }: Props) {
+function CapsuleShelfSecond({ products }: Props) {
   if (!products || products.length === 0) {
     return null;
   }
 
   return (
-    <div class="flex flex-col lg:flex-row items-center justify-center w-full">
+    <div class="md:hidden flex flex-col lg:flex-row items-center justify-center w-full">
       {products?.map((product, index) => (
         <div class="w-full lg:w-96 mb-6">
           <CapsuleCard product={product} />
@@ -23,4 +23,4 @@ function CapsuleShelf({ products }: Props) {
   );
 }
 
-export default CapsuleShelf;
+export default CapsuleShelfSecond;

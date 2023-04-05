@@ -13,14 +13,16 @@ export interface Highlight {
 
 export interface Props {
   highlights?: Highlight[];
-  title: string;
+  title?: string;
+  footerTitle?: string;
+  footerRef?: string;
 }
 
-function Highlights({ highlights = [], title }: Props) {
+function Highlights({ highlights = [], title, footerTitle, footerRef }: Props) {
   return (
-    <Container class="grid grid-cols-1 grid-rows-[48px_1fr] py-10">
+    <Container class="grid grid-cols-1 grid-rows-[48px_1fr]">
       <h2 class="text-center">
-        <Text variant="heading-3" class="text-red-500 font-extrabold">
+        <Text variant="heading-3" class="text-pink-700 font-extrabold mb-2">
           {title}
         </Text>
       </h2>
@@ -45,6 +47,12 @@ function Highlights({ highlights = [], title }: Props) {
           </a>
         ))}
       </Slider>
+      <a
+        href={footerRef}
+        class="hidden md:block text-center font-extrabold underline text-pink-700 pt-12"
+      >
+        {footerTitle}
+      </a>
     </Container>
   );
 }
