@@ -27,7 +27,7 @@ function DuasOpcoes({ title, secondTitle, description, products }: Props) {
         </h1>
       </div>
       {/* Products Div */}
-      <div class="flex flex-row gap-2 md:w-10/12">
+      <div class="flex flex-row gap-2 md:w-10/12 mb-8">
         {products?.map((product, index) => (
           <div class="mx-2 block">
             <OptionProductCard product={product} preload={index === 0} />
@@ -35,29 +35,33 @@ function DuasOpcoes({ title, secondTitle, description, products }: Props) {
         ))}
       </div>
       {/* Footer Div */}
-      <Button
-        class="w-8/12 mt-4 mb-2 h-14 bg-purple-600 text-white font-extrabold"
-        variant="primary"
-      >
-        Comprar para minha empresa
-      </Button>
-      <Button
-        class="w-7/12 mt-4 mb-2 h-14 bg-purple-600 text-white font-extrabold"
-        variant="primary"
-      >
-        Aprenda a instalar
-      </Button>
-      <a class="underline mb-12 font-extrabold">Especificação Técnica</a>
+      <div class="flex flex-col lg:flex-row justify-center items-center w-8/12 lg:w-1/3 gap-4">
+        <Button
+          class="w-8/12 mt-4 mb-2 h-14 bg-purple-600 rounded-lg text-white hover:text-purple-800 hover:border-purple-800 border-2 font-extrabold"
+          variant="primary"
+        >
+          Comprar para minha empresa
+        </Button>
+        <Button
+          class="w-7/12 mt-4 mb-2 h-14 bg-purple-600 rounded-lg text-white hover:text-purple-800 hover:border-purple-800 border-2 font-extrabold"
+          variant="primary"
+        >
+          Aprenda a instalar
+        </Button>
+      </div>
+      <a class="underline mb-12 font-extrabold hover:cursor-pointer">
+        Especificação Técnica
+      </a>
       {/* Compare os Modelos */}
       <div class="w-full flex flex-col items-center justify-center bg-default">
         <div class="flex justify-center my-14">
-          <Text variant="heading-3" class="font-extrabold">
+          <h1 class="font-extrabold text-purple-900 text-3xl">
             Compare os modelos
-          </Text>
+          </h1>
         </div>
-        <div class="flex flex-row gap-2 w-full justify-center">
+        <div class="flex flex-row gap-2 w-full lg:w-10/12 justify-center">
           {products?.map((product, index) => (
-            <div class="mx-2 w-full">
+            <div class="mx-2 w-full lg:w-1/2">
               <OptionProductDescriptionCard
                 product={product}
                 preload={index === 0}

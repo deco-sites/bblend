@@ -25,7 +25,7 @@ function Navbar({ items, searchbar }: {
     <>
       {/* Mobile Version */}
       <div
-        class={`lg:hidden flex flex-row justify-between items-center h-[${navbarHeight}] border-b-1 border-default w-full px-2 gap-2`}
+        class={`xl:hidden flex flex-row justify-between items-center h-[${navbarHeight}] border-b-1 border-default w-full px-2 gap-2`}
       >
         <HeaderButton variant="menu" />
 
@@ -41,7 +41,7 @@ function Navbar({ items, searchbar }: {
             Comprar Máquina
           </a>
         </div>
-        <div class="flex gap-1 text-red-600 text-lg">
+        <div class="flex gap-1 text-red-600 text-lg flex-shrink">
           <HeaderButton variant="search" />
           <HeaderSearchMenu searchbar={searchbar} />
           {/* <HeaderButton variant="cart" /> */}
@@ -49,7 +49,7 @@ function Navbar({ items, searchbar }: {
       </div>
 
       {/* Desktop Version */}
-      <div class="hidden lg:flex flex-row items-center border-b-1 border-default w-full pl-2 pr-3 h-[80px] ">
+      <div class="hidden xl:flex flex-row items-center border-b-1 border-default w-full pl-2 pr-3 h-[80px] ">
         <div class="w-44">
           <a href="/" aria-label="Store logo" class="block px-4 py-3 w-44">
             <Icon id="Logo" width={126} height={16} />

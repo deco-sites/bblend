@@ -105,7 +105,7 @@ function OptionProductCard({ product, preload }: Props) {
           {/* Quer ver como ela fica na sua casa? */}
           {/* Mobile */}
           <div class="lg:hidden flex flex-col items-center gap-1 py-2 mx-10">
-            <div class="flex flex-col mx-2 items-center gap-3 w-3/5">
+            <div class="flex flex-col mx-2 items-center gap-3 md:w-3/5">
               <div class="flex flex-row gap-3">
                 <Image
                   src={"https://bblend.vteximg.com.br/arquivos/qrcode-mobile-box-purple.png?v=637950583506970000"}
@@ -130,14 +130,16 @@ function OptionProductCard({ product, preload }: Props) {
                 e veja como a nova B.blend en.joy fica linda na sua casa.
               </p>
             </div>
-            <button class="outline-none focus:outline-none mb-14 mx-4 p-0 border-1 font-bold h-10 border-purple-800 bg-default rounded-full my-2 text-purple-500">
-              <span class="p-0 m-0">Clique e surpreenda-se</span>
+            <button class="outline-none focus:outline-none mb-14 mx-4 p-0 border-1 font-bold h-10 border-purple-800 bg-default rounded-full my-2 text-purple-800">
+              <span class="p-0 m-0 text-xs sm:text-base ">
+                Clique e surpreenda-se
+              </span>
             </button>
             <div class="flex flex-col items-center justify-center gap-2">
               <p class="text-purple-800 font-light">
                 Por: <span class="font-extrabold">10x de R$ 349,90</span>
               </p>
-              <button class="bg-purple-500 text-white font-bold rounded-lg mb-6 h-12 text-sm">
+              <button class="transition bg-purple-500 hover:bg-purple-600 text-white font-bold rounded-lg mb-6 h-12 text-sm">
                 É Essa que eu quero
               </button>
             </div>
@@ -180,7 +182,7 @@ function OptionProductCard({ product, preload }: Props) {
               <h1 class="text-purple-700 font-light text-2xl">
                 Por: <span class="font-extrabold">10x de R$ 349,90</span>
               </h1>
-              <button class="bg-purple-500 text-white font-bold rounded-lg mb-6 h-12 px-28 text-sm">
+              <button class="transition bg-purple-500 hover:bg-purple-600 text-white font-bold rounded-lg mb-6 h-12 px-28 text-sm">
                 É Essa que eu quero
               </button>
             </div>

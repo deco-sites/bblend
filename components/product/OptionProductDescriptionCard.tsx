@@ -36,94 +36,85 @@ function OptionProductDescriptionCard({ product, preload }: Props) {
       class="group bg-default rounded-lg"
     >
       <div class="flex flex-col gap-1 py-2 items-center ">
-        <Text
-          class="text-pink-500 font-extrabold overflow-hidden overflow-ellipsis whitespace-nowrap"
-          variant="heading-3"
-        >
+        <h1 class="text-pink-700 text-xl font-extrabold whitespace-nowrap">
           <span class=" mr-2">{brand}</span>
           {product.productID === "471" ? "en.joy" : "un.plug"}
-        </Text>
+        </h1>
       </div>
-      <div class="flex flex-col items-center justify-center border-b-1">
-        <p class="text-xs text-pink-600">Cores</p>
+      <div class="flex flex-col  items-center justify-center border-b-1 pb-2">
+        <p class="text-xs text-pink-700 font-bold mt-2">Cores</p>
 
         <div
           class={`flex-row gap-1 mb-2 ${
             product.productID === "471" ? "flex" : "hidden"
           }`}
         >
-          <Button variant="tertiary" class="h-6 w-6 bg-black rounded-lg">
-          </Button>
-          <Button variant="tertiary" class="h-6 w-6 bg-red-500 rounded-lg">
-          </Button>
-          <Button variant="tertiary" class="h-6 w-6 bg-gray-500 rounded-lg">
-          </Button>
+          <button class="h-6 w-6 bg-black rounded-lg">
+          </button>
+          <button class="h-6 w-6 bg-red-500 rounded-lg">
+          </button>
+          <button class="h-6 w-6 bg-gray-500 rounded-lg">
+          </button>
         </div>
         <div
           class={`flex-row gap-1 mb-2 ${
             product.productID === "471" ? "hidden" : "flex"
           }`}
         >
-          <Button variant="tertiary" class="h-6 w-6 bg-black rounded-lg">
-          </Button>
+          <button class="h-6 w-6 bg-black rounded-lg">
+          </button>
         </div>
       </div>
-      <div class="flex flex-col items-center justify-center border-b-1">
-        <p class="text-xs text-pink-600">Capsulas</p>
+      <div class="flex flex-col items-center justify-center border-b-1 pb-2">
+        <p class="text-xs text-pink-700 font-bold mt-2">Capsulas</p>
         <div class="flex flex-row">
           <p class="text-xs mb-2">Prepara todas</p>
         </div>
       </div>
-      <div class="flex flex-col items-center justify-center border-b-1">
-        <p class="text-xs text-pink-600">Agua</p>
+      <div class="flex flex-col items-center justify-center border-b-1 pb-2">
+        <p class="text-xs text-pink-700 font-bold mt-2">Agua</p>
         <div class="flex flex-row">
           <p class="text-xs mb-2">5 tipos</p>
         </div>
       </div>
-      <div class="flex flex-col items-center justify-center border-b-1">
-        <p class="text-xs text-pink-600">Filtro</p>
+      <div class="flex flex-col items-center justify-center border-b-1 pb-2">
+        <p class="text-xs text-pink-700 font-bold mt-2">Filtro</p>
         <div class="flex flex-row">
           <p class="text-xs mb-2">Sim</p>
         </div>
       </div>
-      <div class="flex flex-col items-center justify-center border-b-1">
-        <p class="text-xs text-pink-600">Reservatório</p>
+      <div class="flex flex-col items-center justify-center border-b-1 pb-2">
+        <p class="text-xs text-pink-700 font-bold mt-2">Reservatório</p>
         <div class="flex flex-row">
           <p class="text-xs mb-2">-</p>
         </div>
       </div>
-      <div class="flex flex-col items-center justify-center border-b-1">
-        <p class="text-xs text-pink-600">Dimensões</p>
+      <div class="flex flex-col items-center justify-center border-b-1 pb-2">
+        <p class="text-xs text-pink-700 font-bold mt-2">Dimensões</p>
         <div class="flex flex-row">
           <p class="text-xs mb-2">42 x 32 x 49 cm</p>
         </div>
       </div>
-      <div class="flex flex-col items-center justify-center border-b-1">
-        <p class="text-xs text-pink-600">Peso</p>
+      <div class="flex flex-col items-center justify-center border-b-1 pb-2">
+        <p class="text-xs text-pink-700 font-bold mt-2">Peso</p>
         <div class="flex flex-row">
           <p class="text-xs mb-2">24 kg</p>
         </div>
       </div>
-      <div class="flex flex-col items-center justify-center border-b-1">
-        <p class="text-xs text-pink-600">Guia rápido</p>
+      <div class="flex flex-col items-center justify-center border-b-1 pb-2">
+        <p class="text-xs text-pink-700 font-bold mt-2">Guia rápido</p>
         <div class="flex flex-row">
-          <Button
-            variant="tertiary"
-            class="rounded-full bg-gray-100 mb-2 font-light"
-          >
+          <button class="rounded-full bg-gray-100 mb-2 font-light px-6">
             Baixe aqui
-          </Button>
+          </button>
         </div>
       </div>
-      <div class="flex flex-col items-center justify-center border-b-1">
-        <p class="text-xs text-pink-600">Manual do usuário</p>
+      <div class="flex flex-col items-center justify-center border-b-1 pb-2">
+        <p class="text-xs text-pink-700 font-bold mt-2">Manual do usuário</p>
         <div class="flex flex-row">
-          <Button
-            variant="tertiary"
-            class="rounded-full bg-gray-100 mb-2 font-light"
-          >
+          <button class="rounded-full bg-gray-100 mb-2 font-light px-6">
             Baixe aqui
-          </Button>
+          </button>
         </div>
       </div>
     </div>
