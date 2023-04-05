@@ -20,13 +20,14 @@ export default function HeaderSearchMenu({ searchbar }: Props) {
     <div
       class={`${
         open ? "inline-block" : "hidden"
-      } flex items-center w-screen z-50 bg-white`}
+      } flex items-center z-[996] bg-white absolute left-0 lg:relative w-full`}
     >
       {open && (
         <Suspense fallback={<Loading />}>
           <Searchbar {...searchbar} variant="desktop" />
         </Suspense>
       )}
+
       {
         /* <div
         class={`${

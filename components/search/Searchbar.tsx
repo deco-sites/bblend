@@ -30,7 +30,7 @@ function CloseButton() {
       variant="icon"
       onClick={() => (displaySearchbar.value = false)}
     >
-      <Icon id="XMark" width={25} height={25} strokeWidth={2} />
+      <Icon id="XMark" width={20} height={20} strokeWidth={2} />
     </Button>
   );
 }
@@ -107,18 +107,18 @@ function Searchbar({
     : products;
 
   return (
-    <div class="flex flex-col sm:mr-3 lg:mr-0">
-      <div class="flex gap-2 sm:mr-3 lg:mr-0">
-        {variant === "desktop" && <CloseButton />}
+    <div class="flex flex-col lg:items-center lg:justify-center sm:mr-3 lg:mr-0 lg:mx-2 h-2 absolute left-0 w-full lg:relative z-[996] bg-white">
+      <div class="flex gap-2 sm:mr-3 lg:mr-0 w-full">
         <form
           id="searchbar"
           action={action}
-          class="flex-grow flex items-center gap-3 px-2 py-2 border border-default rounded-full h-[40px] "
+          class="flex items-center justify-between gap-3 px-2 py-2 border border-pink-500 rounded-full h-[40px] bg-white w-full"
         >
+          {variant === "desktop" && <CloseButton />}
           <input
             ref={searchInputRef}
             id="search-input"
-            class="flex-grow outline-none placeholder-shown:sibling:hidden pl-2"
+            class="outline-none placeholder-shown:sibling:hidden pl-2 w-full"
             name={name}
             defaultValue={query}
             onInput={(e) => {
@@ -126,7 +126,7 @@ function Searchbar({
 
               setSearch(value);
             }}
-            placeholder={placeholder}
+            placeholder="Digite aqui o que você procura"
             role="combobox"
             aria-controls="search-suggestion"
             autocomplete="off"
