@@ -20,16 +20,16 @@ function DuasOpcoes({ title, secondTitle, description, products }: Props) {
   return (
     <div class="flex flex-col items-center justify-center w-full bg-gray-100 mt-7">
       {/* Main Title Div */}
-      <div class="flex flex-col items-center my-6">
-        <Text variant="heading-2">Duas opções.</Text>
-        <Text variant="heading-2" class="font-extrabold">
+      <div class="flex flex-col gap-2 md:flex-row items-center my-6">
+        <h1 class="text-4xl">Duas opções.</h1>
+        <h1 class="text-4xl font-extrabold">
           Uma combina com você.
-        </Text>
+        </h1>
       </div>
       {/* Products Div */}
-      <div class="flex flex-row gap-2">
+      <div class="flex flex-row gap-2 md:w-10/12">
         {products?.map((product, index) => (
-          <div class="mx-2">
+          <div class="mx-2 block">
             <OptionProductCard product={product} preload={index === 0} />
           </div>
         ))}
