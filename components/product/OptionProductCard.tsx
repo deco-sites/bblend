@@ -118,7 +118,7 @@ function OptionProductCard({ product, preload }: Props) {
                 >
                   <h1 class="text-left text-xs text-gray-500 ">
                     QUER
-                    <p>VER COMO</p>
+                    <p>VER COM</p>
                     <p>ELA FICA NA</p>
                     <p class="font-extrabold text-purple-800">SUA CASA?</p>
                   </h1>
