@@ -137,7 +137,7 @@ function OptionProductCard({ product, preload }: Props) {
               <p class="text-purple-800 font-light">
                 Por: <span class="font-extrabold">10x de R$ 349,90</span>
               </p>
-              <button class="bg-purple-500 text-white font-bold rounded-lg mb-6 h-12 px-20 text-sm">
+              <button class="bg-purple-500 text-white font-bold rounded-lg mb-6 h-12 text-sm">
                 É Essa que eu quero
               </button>
             </div>
