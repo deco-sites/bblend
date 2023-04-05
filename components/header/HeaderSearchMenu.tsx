@@ -19,14 +19,20 @@ export default function HeaderSearchMenu({ searchbar }: Props) {
   return (
     <div
       class={`${
-        open ? "block border-t-1 border-default shadow" : "hidden"
-      } flex items-center h-4/6 mt-2 absolute left-0 w-screen z-50 bg-white top-[${headerHeight}]`}
+        open ? "inline-block" : "hidden"
+      } flex items-center w-screen z-50 bg-white`}
     >
       {open && (
         <Suspense fallback={<Loading />}>
           <Searchbar {...searchbar} variant="desktop" />
         </Suspense>
       )}
+      {
+        /* <div
+        class={`${
+          open ? "block border-t-1 border-default shadow" : "hidden"
+        } flex items-center h-4/6 mt-2 absolute left-0 w-screen z-50 bg-white top-[${headerHeight}]`} */
+      }
     </div>
   );
 }

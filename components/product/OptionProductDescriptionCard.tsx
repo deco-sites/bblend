@@ -45,7 +45,7 @@ function OptionProductDescriptionCard({ product, preload }: Props) {
         </Text>
       </div>
       <div class="flex flex-col items-center justify-center border-b-1">
-        <p>Cores</p>
+        <p class="text-xs text-pink-600">Cores</p>
 
         <div
           class={`flex-row gap-1 mb-2 ${
@@ -69,51 +69,61 @@ function OptionProductDescriptionCard({ product, preload }: Props) {
         </div>
       </div>
       <div class="flex flex-col items-center justify-center border-b-1">
-        <p>Capsulas</p>
+        <p class="text-xs text-pink-600">Capsulas</p>
         <div class="flex flex-row">
-          <p>Prepara todas</p>
+          <p class="text-xs mb-2">Prepara todas</p>
         </div>
       </div>
       <div class="flex flex-col items-center justify-center border-b-1">
-        <p>Agua</p>
+        <p class="text-xs text-pink-600">Agua</p>
         <div class="flex flex-row">
-          <p>5 tipos</p>
+          <p class="text-xs mb-2">5 tipos</p>
         </div>
       </div>
       <div class="flex flex-col items-center justify-center border-b-1">
-        <p>Filtro</p>
+        <p class="text-xs text-pink-600">Filtro</p>
         <div class="flex flex-row">
-          <p>Sim</p>
+          <p class="text-xs mb-2">Sim</p>
         </div>
       </div>
       <div class="flex flex-col items-center justify-center border-b-1">
-        <p>Reservatório</p>
+        <p class="text-xs text-pink-600">Reservatório</p>
         <div class="flex flex-row">
-          <p>-</p>
+          <p class="text-xs mb-2">-</p>
         </div>
       </div>
       <div class="flex flex-col items-center justify-center border-b-1">
-        <p>Dimensões</p>
+        <p class="text-xs text-pink-600">Dimensões</p>
         <div class="flex flex-row">
-          <p>42 x 32 x 49 cm</p>
+          <p class="text-xs mb-2">42 x 32 x 49 cm</p>
         </div>
       </div>
       <div class="flex flex-col items-center justify-center border-b-1">
-        <p>Peso</p>
+        <p class="text-xs text-pink-600">Peso</p>
         <div class="flex flex-row">
-          <p>24 kg</p>
+          <p class="text-xs mb-2">24 kg</p>
         </div>
       </div>
       <div class="flex flex-col items-center justify-center border-b-1">
-        <p>Guia rápido</p>
+        <p class="text-xs text-pink-600">Guia rápido</p>
         <div class="flex flex-row">
-          <Button>Baixe aqui</Button>
+          <Button
+            variant="tertiary"
+            class="rounded-full bg-gray-100 mb-2 font-light"
+          >
+            Baixe aqui
+          </Button>
         </div>
       </div>
       <div class="flex flex-col items-center justify-center border-b-1">
-        <p>Manual do usuário</p>
+        <p class="text-xs text-pink-600">Manual do usuário</p>
         <div class="flex flex-row">
-          <Button>Baixe aqui</Button>
+          <Button
+            variant="tertiary"
+            class="rounded-full bg-gray-100 mb-2 font-light"
+          >
+            Baixe aqui
+          </Button>
         </div>
       </div>
     </div>

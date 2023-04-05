@@ -107,8 +107,8 @@ function Searchbar({
     : products;
 
   return (
-    <div class="flex flex-col p-4 md:(py-6 px-20)">
-      <div class="flex gap-2 pb-5">
+    <div class="flex flex-col sm:mr-3 lg:mr-0">
+      <div class="flex gap-2 sm:mr-3 lg:mr-0">
         {variant === "desktop" && <CloseButton />}
         <form
           id="searchbar"

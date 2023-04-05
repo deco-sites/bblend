@@ -7,11 +7,16 @@ import { navbarHeight } from "./constants.ts";
 import type { INavItem } from "./NavItem.tsx";
 import type { Props as SearchbarProps } from "$store/components/search/Searchbar.tsx";
 import HeaderSearchMenu from "$store/islands/HeaderSearchMenu.tsx";
+import { useState } from "preact/hooks";
 
 function Navbar({ items, searchbar }: {
   items: INavItem[];
   searchbar: SearchbarProps;
 }) {
+  const [hideSearchBtn, setHideSearchBtn] = useState(true);
+  const handleClickOnSearch = (event: MouseEvent) => {
+    console.log("CLICK");
+  };
   return (
     <>
       {/* Mobile Version */}
@@ -27,7 +32,7 @@ function Navbar({ items, searchbar }: {
         >
           <Icon id="Logo" width={126} height={16} />
         </a>
-        <div class="rounded border-l-1 border-r-1 border-red-500">
+        <div class="rounded-bl-xl rounded-tr-xl border-x-1 border-pink-600">
           <a href="/maquinas" class="mx-2">
             Comprar Máquina
           </a>
@@ -46,11 +51,15 @@ function Navbar({ items, searchbar }: {
             <Icon id="Logo" width={126} height={16} />
           </a>
         </div>
-        <div class="flex-auto flex justify-center">
+        <div class="flex-auto flex justify-center items-center">
           {items.map((item) => <NavItem item={item} />)}
+          <button class="bg-red-500 text-white w-20 h-6 text-sm rounded-bl-xl rounded-tr-xl flex items-center justify-center">
+            Empresas
+          </button>
         </div>
         <div class="flex-none w-44 flex items-center justify-end gap-2">
           <HeaderButton variant="search" />
+
           <HeaderSearchMenu searchbar={searchbar} />
           <Button
             as="a"
