@@ -46,15 +46,124 @@ function Details({ page }: { page: ProductDetailsPage }) {
   const [front, back] = images ?? [];
 
   return (
-    <Container class="py-0 sm:py-10">
-      <div class="flex flex-col gap-4 sm:flex-row sm:gap-10">
+    <div class="py-0 lg:py-10 mx-6">
+      {/* Desktop Version */}
+      <div class="hidden lg:flex gap-4 lg:flex-row lg:gap-10">
+        {/* Product Info */}
+        <div class="flex-auto px-4 lg:px-0">
+          {/* Code and name */}
+          <div class="mt-4 lg:mt-8">
+            <h1 class="font-extrabold text-xl text-gray-700">{name}</h1>
+          </div>
+          {/* Description card */}
+          <div class="mt-4 lg:mt-6">
+            <h1 class="text-gray-500 text-lg text-left">
+              {description}
+            </h1>
+          </div>
+
+          {}
+        </div>
         {/* Image Gallery */}
-        <div class="flex flex-row overflow-auto snap-x snap-mandatory scroll-smooth sm:gap-2">
+        <div class="flex flex-row overflow-auto snap-x snap-mandatory scroll-smooth lg:gap-2">
           {[front, back ?? front].map((img, index) => (
             <Image
               style={{ aspectRatio: "360 / 500" }}
-              class="snap-center min-w-[100vw] sm:min-w-0 sm:w-auto sm:h-[600px]"
-              sizes="(max-width: 640px) 100vw, 30vw"
+              class="snap-center min-w-[100vw] lg:min-w-0 lg:w-auto lg:h-[600px]"
+              sizes="(max-width: 940px) 100vw, 30vw"
+              src={img.url!}
+              alt={img.alternateName}
+              width={360}
+              height={500}
+              // Preload LCP image for better web vitals
+              preload={index === 0}
+              loading={index === 0 ? "eager" : "lazy"}
+            />
+          ))}
+        </div>
+        {/* Prices */}
+        <div>
+          <div class="mt-4">
+            <div class="flex flex-col gap-2 justify-center items-center w-full">
+              <div class="flex w-full flex-row justify-between gap-2">
+                <button class="w-full py-1 focus:outline-none focus:border-pink-500 group px-3 flex flex-col justify-center border-1 rounded-lg bg-gray-100 font-extrabold">
+                  <div class="w-full flex flex-row justify-between items-center">
+                    <button class="group-focus:bg-pink-500 h-4 w-4 rounded-full border-1 border-gray-200" />
+                    Uma única vez
+                    <span class="text-pink-500 font-light">
+                      Por:<span class="font-extrabold">R$2,29</span>
+                    </span>
+                  </div>
+                </button>
+              </div>
+              <div class="flex w-full flex-row justify-between gap-2">
+                <button class="w-full py-1 focus:outline-none focus:border-pink-500 group px-3 flex flex-col justify-center border-1 rounded-lg bg-gray-100 font-extrabold">
+                  <div class="w-full flex flex-row justify-between items-center">
+                    <button class="group-focus:bg-pink-500 h-4 w-4 rounded-full border-1 border-gray-200" />
+                    Compra Programada
+                    <div class="flex flex-col items-center">
+                      <div>
+                        <button class="bg-purple-700 px-2 text-white font-extrabold text-xs rounded-full">
+                          Ganhe +5% off
+                        </button>
+                      </div>
+                      <div>
+                        <span class="text-pink-500 font-light">
+                          Por:<span class="font-extrabold">R$2,29</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden group-focus:flex flex-col items-center w-full">
+                    <p class="font-light text-lg text-center mt-2">
+                      Escolha a frequência que deseja receber:
+                    </p>
+                    <div class="flex flex-row justify-around w-full  ">
+                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-300 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
+                        30 dias
+                      </button>
+                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-300 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
+                        45 dias
+                      </button>
+                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-300 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
+                        60 dias
+                      </button>
+                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-300 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
+                        75 dias
+                      </button>
+                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-300 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
+                        90 dias
+                      </button>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* </div> */}
+          <button class="w-full font-bold text-lg mx-auto mt-2 h-12 rounded-full bg-pink-600 text-white">
+            Selecionar quantidade
+          </button>
+          <p class="w-full text-purple-800 font-extrabold my-2 text-xs text-center">
+            +5%OFF com a Compra Programada
+          </p>
+          <div class="w-full flex flex-row justify-center mb-8">
+            <a class="underline text-pink-500 cursor-pointer font-extrabold text-xl">
+              Mais informações
+            </a>
+          </div>
+        </div>
+      </div>
+      {/* Mobile Version */}
+      <div class="flex lg:hidden flex-col gap-4 lg:flex-row lg:gap-10">
+        {/* Image Gallery */}
+        <div class="flex flex-row overflow-auto snap-x snap-mandatory scroll-smooth lg:gap-2">
+          {[front, back ?? front].map((img, index) => (
+            <Image
+              style={{ aspectRatio: "360 / 500" }}
+              class="snap-center min-w-[100vw] lg:min-w-0 lg:w-auto lg:h-[600px]"
+              sizes="(max-width: 940px) 100vw, 30vw"
               src={img.url!}
               alt={img.alternateName}
               width={360}
@@ -66,71 +175,93 @@ function Details({ page }: { page: ProductDetailsPage }) {
           ))}
         </div>
         {/* Product Info */}
-        <div class="flex-auto px-4 sm:px-0">
-          {/* Breadcrumb */}
-          <Breadcrumb
-            itemListElement={breadcrumbList?.itemListElement.slice(0, -1)}
-          />
+        <div class="flex-auto px-4 lg:px-0">
           {/* Code and name */}
-          <div class="mt-4 sm:mt-8">
-            <div>
-              <Text tone="subdued" variant="caption">
-                Cod. {gtin}
-              </Text>
-            </div>
-            <h1>
-              <Text variant="heading-3">{name}</Text>
+          <div class="mt-4 lg:mt-8">
+            <h1 class="font-extrabold text-xl text-gray-700">{name}</h1>
+          </div>
+          {/* Description card */}
+          <div class="mt-4 lg:mt-6">
+            <h1 class="text-gray-500 text-lg text-left">
+              {description}
             </h1>
           </div>
           {/* Prices */}
           <div class="mt-4">
-            <div class="flex flex-row gap-2 items-center">
-              <Text
-                class="line-through"
-                tone="subdued"
-                variant="list-price"
-              >
-                {formatPrice(listPrice, offers!.priceCurrency!)}
-              </Text>
-              <Text tone="price" variant="heading-3">
-                {formatPrice(price, offers!.priceCurrency!)}
-              </Text>
+            <div class="flex flex-col gap-2 justify-center items-center w-full">
+              <div class="flex w-full flex-row justify-between gap-2">
+                <button class="w-full py-1 focus:outline-none focus:border-pink-500 group px-3 flex flex-col justify-center border-1 rounded-lg bg-gray-100 font-extrabold">
+                  <div class="w-full flex flex-row justify-between items-center">
+                    <button class="group-focus:bg-pink-500 h-4 w-4 rounded-full border-1 border-gray-200" />
+                    Uma única vez
+                    <span class="text-pink-500 font-light">
+                      Por:<span class="font-extrabold">R$2,29</span>
+                    </span>
+                  </div>
+                </button>
+              </div>
+              <div class="flex w-full flex-row justify-between gap-2">
+                <button class="w-full py-1 focus:outline-none focus:border-pink-500 group px-3 flex flex-col justify-center border-1 rounded-lg bg-gray-100 font-extrabold">
+                  <div class="w-full flex flex-row justify-between items-center">
+                    <button class="group-focus:bg-pink-500 h-4 w-4 rounded-full border-1 border-gray-200" />
+                    Compra Programada
+                    <div class="flex flex-col items-center">
+                      <div>
+                        <button class="bg-purple-700 px-2 text-white font-extrabold text-xs rounded-full">
+                          Ganhe +5% off
+                        </button>
+                      </div>
+                      <div>
+                        <span class="text-pink-500 font-light">
+                          Por:<span class="font-extrabold">R$2,29</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden group-focus:flex flex-col items-center w-full">
+                    <p class="font-light text-lg text-center mt-2">
+                      Escolha a frequência que deseja receber:
+                    </p>
+                    <div class="flex flex-row justify-around w-full  ">
+                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-300 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
+                        30 dias
+                      </button>
+                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-300 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
+                        45 dias
+                      </button>
+                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-300 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
+                        60 dias
+                      </button>
+                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-300 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
+                        75 dias
+                      </button>
+                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-300 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
+                        90 dias
+                      </button>
+                    </div>
+                  </div>
+                </button>
+              </div>
             </div>
-            <Text tone="subdued" variant="caption">
-              {installments}
-            </Text>
           </div>
-          {/* Sku Selector */}
-          <div class="mt-4 sm:mt-6">
-            <ProductSelector product={product} />
+
+          {/* </div> */}
+          <button class="w-full font-bold text-lg mx-auto mt-2 h-12 rounded-full bg-pink-600 text-white">
+            Selecionar quantidade
+          </button>
+          <p class="w-full text-purple-800 font-extrabold my-2 text-xs text-center">
+            +5%OFF com a Compra Programada
+          </p>
+          <div class="w-full flex flex-row justify-center mb-8">
+            <a class="underline text-pink-500 cursor-pointer font-extrabold text-xl">
+              Mais informações
+            </a>
           </div>
-          {/* Add to Cart and Favorites button */}
-          <div class="mt-4 sm:mt-10 flex flex-col gap-2">
-            {seller && (
-              <AddToCartButton
-                skuId={productID}
-                sellerId={seller}
-              />
-            )}
-            <Button variant="secondary">
-              <Icon id="Heart" width={20} height={20} strokeWidth={2} />{" "}
-              Favoritar
-            </Button>
-          </div>
-          {/* Description card */}
-          <div class="mt-4 sm:mt-6">
-            <Text variant="caption">
-              {description && (
-                <details>
-                  <summary class="cursor-pointer">Descrição</summary>
-                  <div class="ml-2 mt-2">{description}</div>
-                </details>
-              )}
-            </Text>
-          </div>
+
+          {}
         </div>
       </div>
-    </Container>
+    </div>
   );
 }
 
