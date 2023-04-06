@@ -26,17 +26,18 @@ export interface Props {
 
 function ProductFooter({ image, description }: Props) {
   return (
-    <Container class="w-full">
+    <div class="w-full flex flex-col items-center">
       <div class="w-full mb-2">
         <Image
           src={image!}
           alt={"Pepsi Black banner"}
-          width={414}
-          height={221}
+          width={956}
+          height={226}
+          class="min-w-full w-full"
         >
         </Image>
       </div>
-      <div class="flex-col items-center mx-16 mb-4">
+      <div class="flex flex-col mb-2 mx-20 w-3/5 gap-3">
         <div>
           <Text variant="heading-3">
             Qual bebida em cápsula vai revolucionar o seu dia de hoje?
@@ -49,14 +50,14 @@ function ProductFooter({ image, description }: Props) {
             transformar o seu momento e o seu dia.
           </Text>
         </div>
+        {description?.map((desc) => (
+          <div class="mb-4">
+            <p class="font-extrabold text-left text-lg">{desc.title}</p>
+            <p class="text-left">{desc.desc}</p>
+          </div>
+        ))}
       </div>
-      {description?.map((desc) => (
-        <div class="flex-col items-center mx-16 mb-4">
-          <p class="font-extrabold text-left">{desc.title}</p>
-          <p class="text-left">{desc.desc}</p>
-        </div>
-      ))}
-    </Container>
+    </div>
   );
 }
 

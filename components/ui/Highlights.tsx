@@ -22,9 +22,9 @@ function Highlights({ highlights = [], title, footerTitle, footerRef }: Props) {
   return (
     <Container class="grid grid-cols-1 grid-rows-[48px_1fr]">
       <h2 class="text-center">
-        <Text variant="heading-3" class="text-pink-700 font-extrabold mb-2">
+        <h1 class="text-pink-600 text-center font-extrabold text-3xl mb-5">
           {title}
-        </Text>
+        </h1>
       </h2>
 
       <Slider

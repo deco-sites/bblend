@@ -15,35 +15,37 @@ import * as $$1 from "./islands/HeaderButton.tsx";
 import * as $$2 from "./islands/HeaderModals.tsx";
 import * as $$3 from "./islands/HeaderSearchMenu.tsx";
 import * as $$4 from "./islands/Navbar.tsx";
-import * as $$5 from "./islands/SearchControls.tsx";
-import * as $$6 from "./islands/SliderJS.tsx";
+import * as $$5 from "./islands/ProductDetails.tsx";
+import * as $$6 from "./islands/SearchControls.tsx";
+import * as $$7 from "./islands/SliderJS.tsx";
 import * as $$$0 from "./sections/BannerGrid.tsx";
 import * as $$$1 from "./sections/CapsuleShelf.tsx";
-import * as $$$2 from "./sections/CapsuleShelfSecond.tsx";
-import * as $$$3 from "./sections/Carousel.tsx";
-import * as $$$4 from "./sections/CookieConsent.tsx";
-import * as $$$5 from "./sections/DesignSystem.story.tsx";
-import * as $$$6 from "./sections/DuasOpcoes.tsx";
-import * as $$$7 from "./sections/Features.tsx";
-import * as $$$8 from "./sections/Footer.tsx";
-import * as $$$9 from "./sections/Header.tsx";
-import * as $$$10 from "./sections/Highlights.tsx";
-import * as $$$11 from "./sections/JaTemUmaBBlend.tsx";
-import * as $$$12 from "./sections/LinkTree.tsx";
-import * as $$$13 from "./sections/MiddlePageText.tsx";
-import * as $$$14 from "./sections/ProductDetails.tsx";
-import * as $$$15 from "./sections/ProductFooter.tsx";
-import * as $$$16 from "./sections/ProductGallery.tsx";
-import * as $$$17 from "./sections/ProductShelf.tsx";
-import * as $$$18 from "./sections/SearchControls.tsx";
-import * as $$$19 from "./sections/WhatsApp.tsx";
-import * as $$$20 from "deco-sites/std/sections/SEO.tsx";
-import * as $$$21 from "deco-sites/std/sections/SEOPDP.tsx";
-import * as $$$22 from "deco-sites/std/sections/SEOPLP.tsx";
-import * as $$$23 from "deco-sites/std/sections/configOCC.global.tsx";
-import * as $$$24 from "deco-sites/std/sections/configShopify.global.tsx";
-import * as $$$25 from "deco-sites/std/sections/configVTEX.global.tsx";
-import * as $$$26 from "deco-sites/std/sections/configYourViews.tsx";
+import * as $$$2 from "./sections/CapsuleShelfCategories.tsx";
+import * as $$$3 from "./sections/CapsuleShelfSecond.tsx";
+import * as $$$4 from "./sections/Carousel.tsx";
+import * as $$$5 from "./sections/CookieConsent.tsx";
+import * as $$$6 from "./sections/DesignSystem.story.tsx";
+import * as $$$7 from "./sections/DuasOpcoes.tsx";
+import * as $$$8 from "./sections/Features.tsx";
+import * as $$$9 from "./sections/Footer.tsx";
+import * as $$$10 from "./sections/Header.tsx";
+import * as $$$11 from "./sections/Highlights.tsx";
+import * as $$$12 from "./sections/JaTemUmaBBlend.tsx";
+import * as $$$13 from "./sections/LinkTree.tsx";
+import * as $$$14 from "./sections/MiddlePageText.tsx";
+import * as $$$15 from "./sections/ProductDetails.tsx";
+import * as $$$16 from "./sections/ProductFooter.tsx";
+import * as $$$17 from "./sections/ProductGallery.tsx";
+import * as $$$18 from "./sections/ProductShelf.tsx";
+import * as $$$19 from "./sections/SearchControls.tsx";
+import * as $$$20 from "./sections/WhatsApp.tsx";
+import * as $$$21 from "deco-sites/std/sections/SEO.tsx";
+import * as $$$22 from "deco-sites/std/sections/SEOPDP.tsx";
+import * as $$$23 from "deco-sites/std/sections/SEOPLP.tsx";
+import * as $$$24 from "deco-sites/std/sections/configOCC.global.tsx";
+import * as $$$25 from "deco-sites/std/sections/configShopify.global.tsx";
+import * as $$$26 from "deco-sites/std/sections/configVTEX.global.tsx";
+import * as $$$27 from "deco-sites/std/sections/configYourViews.tsx";
 import * as $$$$0 from "$live/functions/EffectSelectPage.ts";
 import * as $$$$1 from "$live/functions/MatchDate.ts";
 import * as $$$$2 from "$live/functions/MatchEnvironment.ts";
@@ -78,37 +80,39 @@ const manifest: DecoManifest = {
     "./islands/HeaderModals.tsx": $$2,
     "./islands/HeaderSearchMenu.tsx": $$3,
     "./islands/Navbar.tsx": $$4,
-    "./islands/SearchControls.tsx": $$5,
-    "./islands/SliderJS.tsx": $$6,
+    "./islands/ProductDetails.tsx": $$5,
+    "./islands/SearchControls.tsx": $$6,
+    "./islands/SliderJS.tsx": $$7,
   },
   sections: {
     "./sections/BannerGrid.tsx": $$$0,
     "./sections/CapsuleShelf.tsx": $$$1,
-    "./sections/CapsuleShelfSecond.tsx": $$$2,
-    "./sections/Carousel.tsx": $$$3,
-    "./sections/CookieConsent.tsx": $$$4,
-    "./sections/DesignSystem.story.tsx": $$$5,
-    "./sections/DuasOpcoes.tsx": $$$6,
-    "./sections/Features.tsx": $$$7,
-    "./sections/Footer.tsx": $$$8,
-    "./sections/Header.tsx": $$$9,
-    "./sections/Highlights.tsx": $$$10,
-    "./sections/JaTemUmaBBlend.tsx": $$$11,
-    "./sections/LinkTree.tsx": $$$12,
-    "./sections/MiddlePageText.tsx": $$$13,
-    "./sections/ProductDetails.tsx": $$$14,
-    "./sections/ProductFooter.tsx": $$$15,
-    "./sections/ProductGallery.tsx": $$$16,
-    "./sections/ProductShelf.tsx": $$$17,
-    "./sections/SearchControls.tsx": $$$18,
-    "./sections/WhatsApp.tsx": $$$19,
-    "deco-sites/std/sections/SEO.tsx": $$$20,
-    "deco-sites/std/sections/SEOPDP.tsx": $$$21,
-    "deco-sites/std/sections/SEOPLP.tsx": $$$22,
-    "deco-sites/std/sections/configOCC.global.tsx": $$$23,
-    "deco-sites/std/sections/configShopify.global.tsx": $$$24,
-    "deco-sites/std/sections/configVTEX.global.tsx": $$$25,
-    "deco-sites/std/sections/configYourViews.tsx": $$$26,
+    "./sections/CapsuleShelfCategories.tsx": $$$2,
+    "./sections/CapsuleShelfSecond.tsx": $$$3,
+    "./sections/Carousel.tsx": $$$4,
+    "./sections/CookieConsent.tsx": $$$5,
+    "./sections/DesignSystem.story.tsx": $$$6,
+    "./sections/DuasOpcoes.tsx": $$$7,
+    "./sections/Features.tsx": $$$8,
+    "./sections/Footer.tsx": $$$9,
+    "./sections/Header.tsx": $$$10,
+    "./sections/Highlights.tsx": $$$11,
+    "./sections/JaTemUmaBBlend.tsx": $$$12,
+    "./sections/LinkTree.tsx": $$$13,
+    "./sections/MiddlePageText.tsx": $$$14,
+    "./sections/ProductDetails.tsx": $$$15,
+    "./sections/ProductFooter.tsx": $$$16,
+    "./sections/ProductGallery.tsx": $$$17,
+    "./sections/ProductShelf.tsx": $$$18,
+    "./sections/SearchControls.tsx": $$$19,
+    "./sections/WhatsApp.tsx": $$$20,
+    "deco-sites/std/sections/SEO.tsx": $$$21,
+    "deco-sites/std/sections/SEOPDP.tsx": $$$22,
+    "deco-sites/std/sections/SEOPLP.tsx": $$$23,
+    "deco-sites/std/sections/configOCC.global.tsx": $$$24,
+    "deco-sites/std/sections/configShopify.global.tsx": $$$25,
+    "deco-sites/std/sections/configVTEX.global.tsx": $$$26,
+    "deco-sites/std/sections/configYourViews.tsx": $$$27,
   },
   functions: {
     "$live/functions/EffectSelectPage.ts": $$$$0,
@@ -235,6 +239,24 @@ const manifest: DecoManifest = {
     "./sections/CapsuleShelf.tsx": {
       "inputSchema": {
         "title": " Capsule Shelf",
+        "type": "object",
+        "properties": {
+          "products": {
+            "$id": "bae848f3957be1cb6ed2c2ac3847787272389ee9",
+            "format": "live-function",
+            "type": "string",
+            "title": "Products",
+          },
+        },
+        "required": [
+          "products",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/CapsuleShelfCategories.tsx": {
+      "inputSchema": {
+        "title": " Capsule Shelf Categories",
         "type": "object",
         "properties": {
           "products": {
@@ -1288,6 +1310,28 @@ const manifest: DecoManifest = {
         "title": " Search Controls",
         "type": "object",
         "properties": {
+          "categories": {
+            "type": "array",
+            "items": {
+              "title": "Categorie",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "title": "Name",
+                },
+                "iconRef": {
+                  "type": "string",
+                  "title": "Icon Ref",
+                },
+              },
+              "required": [
+                "name",
+                "iconRef",
+              ],
+            },
+            "title": "Categories",
+          },
           "page": {
             "$id": "dc324bcbdc313fdca3eaf23a9c1547d4702ee1ce",
             "format": "live-function",
@@ -1296,6 +1340,7 @@ const manifest: DecoManifest = {
           },
         },
         "required": [
+          "categories",
           "page",
         ],
       },

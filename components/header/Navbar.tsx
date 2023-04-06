@@ -49,7 +49,7 @@ function Navbar({ items, searchbar }: {
       </div>
 
       {/* Desktop Version */}
-      <div class="hidden xl:flex flex-row items-center border-b-1 border-default w-full pl-2 pr-3 h-[80px] ">
+      <div class="hidden xl:flex flex-row items-center justify-around border-b-1 border-default w-full pl-2 pr-3 h-[80px] ">
         <div class="w-44">
           <a href="/" aria-label="Store logo" class="block px-4 py-3 w-44">
             <Icon id="Logo" width={126} height={16} />
@@ -61,11 +61,11 @@ function Navbar({ items, searchbar }: {
             Empresas
           </button>
         </div>
-        <div class="flex items-center ml-4 gap-2 mr-5">
+        <div class="flex items-center ml-8 gap-2 mr-5">
           <HeaderSearchMenu searchbar={searchbar} />
           {!displaySearchbar.value && <HeaderButton variant="search" />}
 
-          <div class="hidden lg:flex flex-row">
+          <div class="hidden lg:flex flex-row ml-4">
             <div>
               <p class="text-sm">
                 Olá, <span class="font-extrabold text-sm">Visitante</span>
