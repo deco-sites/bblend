@@ -48,9 +48,9 @@ function Details({ page }: { page: ProductDetailsPage }) {
   return (
     <div class="py-0 lg:py-10 mx-6">
       {/* Desktop Version */}
-      <div class="hidden lg:flex gap-4 lg:flex-row lg:gap-10">
+      <div class="hidden lg:flex gap-4 items-center lg:flex-row w-full">
         {/* Product Info */}
-        <div class="flex-auto px-4 lg:px-0">
+        <div class="flex-auto px-4 lg:px-0 w-6 flex-wrap">
           {/* Code and name */}
           <div class="mt-4 lg:mt-8">
             <h1 class="font-extrabold text-xl text-gray-700">{name}</h1>
@@ -65,11 +65,11 @@ function Details({ page }: { page: ProductDetailsPage }) {
           {}
         </div>
         {/* Image Gallery */}
-        <div class="flex flex-row overflow-auto snap-x snap-mandatory scroll-smooth lg:gap-2">
+        <div class="flex flex-row overflow-auto snap-x snap-mandatory scroll-smooth lg:gap-2 w-1/3 ml-8">
           {[front, back ?? front].map((img, index) => (
             <Image
               style={{ aspectRatio: "360 / 500" }}
-              class="snap-center min-w-[100vw] lg:min-w-0 lg:w-auto lg:h-[600px]"
+              class="snap-center min-w-full lg:w-auto lg:h-[600px]"
               sizes="(max-width: 940px) 100vw, 30vw"
               src={img.url!}
               alt={img.alternateName}
@@ -82,7 +82,7 @@ function Details({ page }: { page: ProductDetailsPage }) {
           ))}
         </div>
         {/* Prices */}
-        <div>
+        <div class="w-1/3">
           <div class="mt-4">
             <div class="flex flex-col gap-2 justify-center items-center w-full">
               <div class="flex w-full flex-row justify-between gap-2">
@@ -246,16 +246,18 @@ function Details({ page }: { page: ProductDetailsPage }) {
           </div>
 
           {/* </div> */}
-          <button class="w-full font-bold text-lg mx-auto mt-2 h-12 rounded-full bg-pink-600 text-white">
-            Selecionar quantidade
-          </button>
-          <p class="w-full text-purple-800 font-extrabold my-2 text-xs text-center">
-            +5%OFF com a Compra Programada
-          </p>
-          <div class="w-full flex flex-row justify-center mb-8">
-            <a class="underline text-pink-500 cursor-pointer font-extrabold text-xl">
-              Mais informações
-            </a>
+          <div class="lg:hidden">
+            <button class="w-full font-bold text-lg mx-auto mt-2 h-12 rounded-full bg-pink-600 text-white">
+              Selecionar quantidade
+            </button>
+            <p class="w-full text-purple-800 font-extrabold my-2 text-xs text-center">
+              +5%OFF com a Compra Programada
+            </p>
+            <div class="w-full flex flex-row justify-center mb-8">
+              <a class="underline text-pink-500 cursor-pointer font-extrabold text-xl">
+                Mais informações
+              </a>
+            </div>
           </div>
 
           {}
