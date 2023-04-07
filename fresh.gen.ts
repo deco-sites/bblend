@@ -31,21 +31,22 @@ import * as $$$9 from "./sections/Footer.tsx";
 import * as $$$10 from "./sections/Header.tsx";
 import * as $$$11 from "./sections/Highlights.tsx";
 import * as $$$12 from "./sections/JaTemUmaBBlend.tsx";
-import * as $$$13 from "./sections/LinkTree.tsx";
-import * as $$$14 from "./sections/MiddlePageText.tsx";
-import * as $$$15 from "./sections/ProductDetails.tsx";
-import * as $$$16 from "./sections/ProductFooter.tsx";
-import * as $$$17 from "./sections/ProductGallery.tsx";
-import * as $$$18 from "./sections/ProductShelf.tsx";
-import * as $$$19 from "./sections/SearchControls.tsx";
-import * as $$$20 from "./sections/WhatsApp.tsx";
-import * as $$$21 from "deco-sites/std/sections/SEO.tsx";
-import * as $$$22 from "deco-sites/std/sections/SEOPDP.tsx";
-import * as $$$23 from "deco-sites/std/sections/SEOPLP.tsx";
-import * as $$$24 from "deco-sites/std/sections/configOCC.global.tsx";
-import * as $$$25 from "deco-sites/std/sections/configShopify.global.tsx";
-import * as $$$26 from "deco-sites/std/sections/configVTEX.global.tsx";
-import * as $$$27 from "deco-sites/std/sections/configYourViews.tsx";
+import * as $$$13 from "./sections/LandingPageFooter.tsx";
+import * as $$$14 from "./sections/LinkTree.tsx";
+import * as $$$15 from "./sections/MiddlePageText.tsx";
+import * as $$$16 from "./sections/ProductDetails.tsx";
+import * as $$$17 from "./sections/ProductFooter.tsx";
+import * as $$$18 from "./sections/ProductGallery.tsx";
+import * as $$$19 from "./sections/ProductShelf.tsx";
+import * as $$$20 from "./sections/SearchControls.tsx";
+import * as $$$21 from "./sections/WhatsApp.tsx";
+import * as $$$22 from "deco-sites/std/sections/SEO.tsx";
+import * as $$$23 from "deco-sites/std/sections/SEOPDP.tsx";
+import * as $$$24 from "deco-sites/std/sections/SEOPLP.tsx";
+import * as $$$25 from "deco-sites/std/sections/configOCC.global.tsx";
+import * as $$$26 from "deco-sites/std/sections/configShopify.global.tsx";
+import * as $$$27 from "deco-sites/std/sections/configVTEX.global.tsx";
+import * as $$$28 from "deco-sites/std/sections/configYourViews.tsx";
 import * as $$$$0 from "$live/functions/EffectSelectPage.ts";
 import * as $$$$1 from "$live/functions/MatchDate.ts";
 import * as $$$$2 from "$live/functions/MatchEnvironment.ts";
@@ -98,21 +99,22 @@ const manifest: DecoManifest = {
     "./sections/Header.tsx": $$$10,
     "./sections/Highlights.tsx": $$$11,
     "./sections/JaTemUmaBBlend.tsx": $$$12,
-    "./sections/LinkTree.tsx": $$$13,
-    "./sections/MiddlePageText.tsx": $$$14,
-    "./sections/ProductDetails.tsx": $$$15,
-    "./sections/ProductFooter.tsx": $$$16,
-    "./sections/ProductGallery.tsx": $$$17,
-    "./sections/ProductShelf.tsx": $$$18,
-    "./sections/SearchControls.tsx": $$$19,
-    "./sections/WhatsApp.tsx": $$$20,
-    "deco-sites/std/sections/SEO.tsx": $$$21,
-    "deco-sites/std/sections/SEOPDP.tsx": $$$22,
-    "deco-sites/std/sections/SEOPLP.tsx": $$$23,
-    "deco-sites/std/sections/configOCC.global.tsx": $$$24,
-    "deco-sites/std/sections/configShopify.global.tsx": $$$25,
-    "deco-sites/std/sections/configVTEX.global.tsx": $$$26,
-    "deco-sites/std/sections/configYourViews.tsx": $$$27,
+    "./sections/LandingPageFooter.tsx": $$$13,
+    "./sections/LinkTree.tsx": $$$14,
+    "./sections/MiddlePageText.tsx": $$$15,
+    "./sections/ProductDetails.tsx": $$$16,
+    "./sections/ProductFooter.tsx": $$$17,
+    "./sections/ProductGallery.tsx": $$$18,
+    "./sections/ProductShelf.tsx": $$$19,
+    "./sections/SearchControls.tsx": $$$20,
+    "./sections/WhatsApp.tsx": $$$21,
+    "deco-sites/std/sections/SEO.tsx": $$$22,
+    "deco-sites/std/sections/SEOPDP.tsx": $$$23,
+    "deco-sites/std/sections/SEOPLP.tsx": $$$24,
+    "deco-sites/std/sections/configOCC.global.tsx": $$$25,
+    "deco-sites/std/sections/configShopify.global.tsx": $$$26,
+    "deco-sites/std/sections/configVTEX.global.tsx": $$$27,
+    "deco-sites/std/sections/configYourViews.tsx": $$$28,
   },
   functions: {
     "$live/functions/EffectSelectPage.ts": $$$$0,
@@ -1031,6 +1033,37 @@ const manifest: DecoManifest = {
     "./sections/JaTemUmaBBlend.tsx": {
       "inputSchema": {
         "title": " Ja Tem Uma B Blend",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Title",
+          },
+          "secondTitle": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Second Title",
+          },
+          "description": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Description",
+          },
+        },
+        "required": [],
+      },
+      "outputSchema": null,
+    },
+    "./sections/LandingPageFooter.tsx": {
+      "inputSchema": {
+        "title": " Landing Page Footer",
         "type": "object",
         "properties": {
           "title": {

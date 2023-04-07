@@ -48,7 +48,7 @@ function Details({ page }: { page: ProductDetailsPage }) {
   return (
     <div class="py-0 lg:py-10 mx-6">
       {/* Desktop Version */}
-      <div class="hidden lg:flex gap-4 items-center lg:flex-row w-full">
+      <div class="hidden lg:flex gap-4 items-center lg:flex-row w-4/5 mx-auto justify-center ">
         {/* Product Info */}
         <div class="flex-auto px-4 lg:px-0 w-6 flex-wrap">
           {/* Code and name */}
@@ -69,7 +69,7 @@ function Details({ page }: { page: ProductDetailsPage }) {
           {[front, back ?? front].map((img, index) => (
             <Image
               style={{ aspectRatio: "360 / 500" }}
-              class="snap-center min-w-full lg:w-auto lg:h-[600px]"
+              class="snap-center min-w-full lg:w-auto lg:h-[479px]"
               sizes="(max-width: 940px) 100vw, 30vw"
               src={img.url!}
               alt={img.alternateName}
@@ -119,19 +119,19 @@ function Details({ page }: { page: ProductDetailsPage }) {
                       Escolha a frequência que deseja receber:
                     </p>
                     <div class="flex flex-row justify-around w-full  ">
-                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-300 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
+                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-400 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
                         30 dias
                       </button>
-                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-300 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
+                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-400 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
                         45 dias
                       </button>
-                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-300 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
+                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-400 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
                         60 dias
                       </button>
-                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-300 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
+                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-400 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
                         75 dias
                       </button>
-                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-300 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
+                      <button class="h-10 focus:outline-none py-2 my-2 px-1 border-gray-100 text-gray-400 font-extrabold focus:text-pink-500 focus:border-pink-500 border-2 rounded-lg outline-none">
                         90 dias
                       </button>
                     </div>
@@ -142,7 +142,7 @@ function Details({ page }: { page: ProductDetailsPage }) {
           </div>
 
           {/* </div> */}
-          <button class="w-full font-bold text-lg mx-auto mt-2 h-12 rounded-full bg-pink-600 text-white">
+          <button class="w-full self-center text-center font-bold text-lg  mt-2 h-12 rounded-full bg-pink-600 text-white">
             Selecionar quantidade
           </button>
           <p class="w-full text-purple-800 font-extrabold my-2 text-xs text-center">
