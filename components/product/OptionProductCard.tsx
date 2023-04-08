@@ -131,9 +131,9 @@ function OptionProductCard({ product, preload }: Props) {
               </p>
             </div>
             <button class="outline-none focus:outline-none mb-14 mx-4 p-0 border-1 font-bold h-10 border-purple-800 bg-default rounded-full my-2 text-purple-800">
-              <span class="p-0 m-0 text-xs sm:text-base ">
+              <p class="text-xs sm:text-base truncate m-0">
                 Clique e surpreenda-se
-              </span>
+              </p>
             </button>
             <div class="flex flex-col items-center justify-center gap-2">
               <p class="text-purple-800 font-light">
