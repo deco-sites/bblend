@@ -133,7 +133,9 @@ function Details({ page }: { page: ProductDetailsPage }) {
                       <button class="group-focus:bg-pink-500 h-4 w-4 rounded-full border-1 border-gray-200" />
                       Uma única vez
                       <span class="text-pink-500 font-light">
-                        Por:<span class="font-extrabold">R$2,29</span>
+                        Por:<span class="font-extrabold">
+                          R${offers?.highPrice}
+                        </span>
                       </span>
                     </div>
                   </button>
@@ -151,7 +153,9 @@ function Details({ page }: { page: ProductDetailsPage }) {
                         </div>
                         <div>
                           <span class="text-pink-500 font-light">
-                            Por:<span class="font-extrabold">R$2,29</span>
+                            Por:<span class="font-extrabold">
+                              R${offers?.lowPrice}
+                            </span>
                           </span>
                         </div>
                       </div>
@@ -273,7 +277,9 @@ function Details({ page }: { page: ProductDetailsPage }) {
                     <button class="group-focus:bg-pink-500 h-4 w-4 rounded-full border-1 border-gray-200" />
                     Uma única vez
                     <span class="text-pink-500 font-light">
-                      Por:<span class="font-extrabold">R$2,29</span>
+                      Por:<span class="font-extrabold">
+                        R${offers?.highPrice}
+                      </span>
                     </span>
                   </div>
                 </button>
@@ -291,7 +297,9 @@ function Details({ page }: { page: ProductDetailsPage }) {
                       </div>
                       <div>
                         <span class="text-pink-500 font-light">
-                          Por:<span class="font-extrabold">R$2,29</span>
+                          Por:<span class="font-extrabold">
+                            R${offers?.lowPrice}
+                          </span>
                         </span>
                       </div>
                     </div>
