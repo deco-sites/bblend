@@ -11,7 +11,7 @@ import type { INavItem } from "./NavItem.tsx";
 import type { Props as SearchbarProps } from "$store/components/search/Searchbar.tsx";
 import HeaderSearchMenu from "$store/islands/HeaderSearchMenu.tsx";
 import { useState } from "preact/hooks";
-
+import Image from "deco-sites/std/components/Image.tsx";
 function Navbar({ items, searchbar }: {
   items: INavItem[];
   searchbar: SearchbarProps;
@@ -34,7 +34,12 @@ function Navbar({ items, searchbar }: {
           class={`flex-grow inline-flex items-center min-h-[${navbarHeight}]`}
           aria-label="Store logo"
         >
-          <Icon id="Logo" width={126} height={16} />
+          <Image
+            src="https://bblend.vteximg.com.br/arquivos/logo_cereja.svg?v=637538488237170000"
+            alt="logo"
+            width={126}
+            height={16}
+          />
         </a>
         <div class="rounded-bl-xl rounded-tr-xl border-x-1 border-pink-600">
           <a href="/maquinas" class="mx-2">
@@ -52,7 +57,12 @@ function Navbar({ items, searchbar }: {
       <div class="hidden xl:flex flex-row items-center justify-around border-b-1 border-default w-full pl-2 pr-3 h-[80px] ">
         <div class="w-44">
           <a href="/" aria-label="Store logo" class="block px-4 py-3 w-44">
-            <Icon id="Logo" width={126} height={16} />
+            <Image
+              src="https://bblend.vteximg.com.br/arquivos/logo_cereja.svg?v=637538488237170000"
+              alt="logo"
+              width={126}
+              height={16}
+            />
           </a>
         </div>
         <div class="flex justify-start items-center">

@@ -82,7 +82,7 @@ function MiddlePageText({ title, secondTitle, description, products }: Props) {
             >
             </Image>
           </div>
-          <div class="md:flex lg:grid grid-cols-2 flex-row flex-wrap mt-4">
+          <div class="md:flex lg:grid lg:grid-cols-1 xl:grid-cols-2 flex-row flex-wrap mt-4">
             {products?.map((product, index) => (
               <div class="lg:w-96 block mb-6">
                 <CapsuleCard product={product} />

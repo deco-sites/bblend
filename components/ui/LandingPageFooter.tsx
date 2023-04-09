@@ -1,15 +1,26 @@
 import Text from "$store/components/ui/Text.tsx";
 import Image from "deco-sites/std/components/Image.tsx";
 import Button from "$store/components/ui/Button.tsx";
+import type { LoaderReturnType } from "$live/types.ts";
+import type { Product } from "deco-sites/std/commerce/types.ts";
+import CapsuleCard from "$store/components/product/CapsuleCard.tsx";
+
 export interface Props {
   title?: string;
   secondTitle?: string;
   description?: string;
+  products: LoaderReturnType<Product[] | null>;
 }
 
-function LandingPageFooter({ title, secondTitle, description }: Props) {
+function LandingPageFooter(
+  { title, secondTitle, description, products }: Props,
+) {
+  if (!products || products.length === 0) {
+    return null;
+  }
   return (
     <>
+      {/* Mobile */}
       <div class="w-full lg:hidden flex flex-col items-center mb-10">
         {/* Title */}
         <div class="my-4">
@@ -63,21 +74,28 @@ function LandingPageFooter({ title, secondTitle, description }: Props) {
         </button>
       </div>
       {/* Desktop */}
-      <div class="w-full hidden lg:flex flex-col items-center mb-10">
+      <div class="w-full hidden lg:flex flex-col items-center mb-10 justify-center mt-10">
         {/* Title */}
-        <div class="w-full flex flex-row ">
+        <div class="w-full flex flex-row">
           <div
-            style="background-image: url('https://bblend.vteximg.com.br/arquivos/porta-capsula-mobile@2x.png');"
-            class="w-full max-w-[830px] inline z-0 min-h-[650px] bg-cover bg-no-repeat "
+            style="background-image: url('https://bblend.vteximg.com.br/arquivos/porta-capsula@2x.png');"
+            class="flex-shrink-1 w-full max-w-[830px] inline z-0 min-h-[650px] bg-cover bg-no-repeat inline relative "
           >
           </div>
-          <div class="my-4 w-full flex flex-col justify-center">
+          <div class="my-4 w-full flex flex-col justify-center ml-10">
             <h1 class="text-2xl text-gray-800 text-center">
               Suas cápsulas ao lado de sua B.blend{" "}
               <span class="text-gray-900 font-extrabold">
                 no maior estilo
               </span>
             </h1>
+            <div class="md:flex lg:grid grid-cols-2 flex-row flex-wrap mt-4 flex-shrink-0 mr-20 gap-4">
+              {products?.map((product, index) => (
+                <div class="lg:w-96 block mb-6 flex-shrink-1">
+                  <CapsuleCard product={product} />
+                </div>
+              ))}
+            </div>
             <button class="w-4/5 h-10 mx-auto bg-pink-500 text-white underline font-extrabold rounded-full">
               Ver todos os acessórios
             </button>

@@ -33,9 +33,9 @@ function CapsuleCard({ product }: Props) {
           </a>
           <div class="flex flex-col mt-3">
             <a href={url}>
-              <h3 class="mb-4 font-extrabold">Pepsi</h3>
+              <h3 class="mb-4 font-extrabold">{name}</h3>
             </a>
-            <h2 class="text-pink-500 font-extrabold">RS$2,29</h2>
+            <h2 class="text-pink-500 font-extrabold">RS${offers?.highPrice}</h2>
           </div>
           <div class="mx-auto mt-auto mb-2">
             <a href={url}>

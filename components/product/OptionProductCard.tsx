@@ -51,7 +51,6 @@ function OptionProductCard({ product, preload }: Props) {
             class="rounded w-full group-hover:hidden"
             preload={preload}
             loading={preload ? "eager" : "lazy"}
-            sizes="(max-width: 640px) 50vw, 20vw"
           />
           <Image
             src={back?.url ?? front.url!}
@@ -59,7 +58,6 @@ function OptionProductCard({ product, preload }: Props) {
             width={193}
             height={193}
             class="rounded w-full hidden group-hover:block"
-            sizes="(max-width: 640px) 50vw, 20vw"
           />
           {seller && (
             <div
@@ -104,7 +102,7 @@ function OptionProductCard({ product, preload }: Props) {
           </div>
           {/* Quer ver como ela fica na sua casa? */}
           {/* Mobile */}
-          <div class="lg:hidden flex flex-col items-center gap-1 py-2 mx-10">
+          <div class="lg:hidden flex flex-col items-center gap-1 py-2">
             <div class="flex flex-col mx-2 items-center gap-3 md:w-3/5">
               <div class="flex flex-row gap-3">
                 <Image
