@@ -33,13 +33,15 @@ function CapsuleCard({ product }: Props) {
           </a>
           <div class="flex flex-col mt-3">
             <a href={url}>
-              <h3 class="mb-4 font-extrabold">{name}</h3>
+              <h3 class="font-extrabold">{name}</h3>
             </a>
-            <h2 class="text-pink-500 font-extrabold">RS${offers?.highPrice}</h2>
+            <h2 class="text-pink-700 font-extrabold mb-4 mt-3">
+              RS${offers?.highPrice}
+            </h2>
           </div>
           <div class="mx-auto mt-auto mb-2">
             <a href={url}>
-              <button class="bg-pink-500 transition hover:bg-pink-800 font-extrabold rounded-full w-36 text-white h-10">
+              <button class="bg-pink-500 transition hover:bg-pink-800 font-extrabold rounded-full w-36 text-white h-10 mr-2">
                 Eu quero
               </button>
             </a>
@@ -48,12 +50,6 @@ function CapsuleCard({ product }: Props) {
 
         {/* Footer */}
         <div class="flex flex-row justify-between px-3 pb-3 min-w-full w-full h-2/6">
-          <div class="text-sm w-1/2 self-end">
-            <span class="text-gray-800 font-bold text-xs">Val da cáp:</span>
-            {" "}
-            08/05/2023
-          </div>
-
           <div class="flex flex-col items-center justify-center w-1/2">
             <p class="text-purple-600 font-extrabold text-xs text-center">
               +5%OFF com a Compra Programada
